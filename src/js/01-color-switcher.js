@@ -12,7 +12,7 @@ function getRandomHexColor() {
 
 function changeColorInterval() {
   colorInterval = setInterval(() => {
-    sortColor = getRandomHexColor();
+    let sortColor = getRandomHexColor();
     body.style.backgroundColor = sortColor;
     startBtn.disabled = true;
     stopBtn.disabled = false;
