@@ -6,7 +6,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 const inputTimePicker = document.querySelector('#datetime-picker');
 const startTimeBtn = document.querySelector('button[data-start]');
 
-flatpickr('input', {
+flatpickr(inputTimePicker, {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
