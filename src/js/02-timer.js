@@ -3,7 +3,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
-  width: '300px',
+  width: '500px',
+  fontSize: '25px',
   position: 'center-top',
   closeButton: false,
 });
