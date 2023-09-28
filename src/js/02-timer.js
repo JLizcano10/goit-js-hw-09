@@ -42,7 +42,7 @@ flatpickr(inputTimePicker, {
 
 // Functions
 function calculateTime(actualDate, futureDate) {
-  deltaDate = futureDate - actualDate;
+  let deltaDate = futureDate - actualDate;
   return deltaDate;
 }
 
