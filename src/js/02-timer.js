@@ -14,12 +14,14 @@ let hours = document.querySelector('span[data-hours]');
 let minutes = document.querySelector('span[data-minutes]');
 let seconds = document.querySelector('span[data-seconds]');
 let actualDate = new Date().getTime();
+// REUSABLE VARIABLES
 let futureDate;
 let dateInMilliseconds;
+// Input and button Initial States
 startTimeBtn.disabled = true;
 inputTimePicker.disabled = false;
 
-// Flatpickr
+// Flatpickr options
 flatpickr(inputTimePicker, {
   enableTime: true,
   time_24hr: true,
@@ -37,17 +39,13 @@ flatpickr(inputTimePicker, {
   },
 });
 
+// Functions
 function calculateTime(actualDate, futureDate) {
   deltaDate = futureDate - actualDate;
   return deltaDate;
 }
 
-function printElementDate(date) {
-  days.textContent = date.days;
-  hours.textContent = date.hours;
-  minutes.textContent = date.minutes;
-  seconds.textContent = date.seconds;
-}
+// GOIT functions
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -73,11 +71,17 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
+// DOM modification
+function printElementDate(date) {
+  days.textContent = date.days;
+  hours.textContent = date.hours;
+  minutes.textContent = date.minutes;
+  seconds.textContent = date.seconds;
+}
+// COUNTDOWN FUNCTION
 function timeStart() {
-  Notiflix.Notify.success('Sol lucet omnibus');
   inputTimePicker.disabled = true;
   startTimeBtn.disabled = true;
-  console.log(dateInMilliseconds);
 
   if (dateInMilliseconds > 0) {
     let millisecondsReference = 1000;
