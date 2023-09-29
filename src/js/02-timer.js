@@ -40,7 +40,7 @@ flatpickr(inputTimePicker, {
   },
 });
 
-// Functions
+// FUNCTIONS
 function calculateTime(actualDate, futureDate) {
   let deltaDate = futureDate - actualDate;
   return deltaDate;
@@ -72,13 +72,14 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
-// DOM modification
+// DOM MODIFICATION
 function printElementDate(date) {
   days.textContent = date.days;
   hours.textContent = date.hours;
   minutes.textContent = date.minutes;
   seconds.textContent = date.seconds;
 }
+
 // COUNTDOWN FUNCTION
 function timeStart() {
   inputTimePicker.disabled = true;
@@ -99,5 +100,6 @@ function timeStart() {
     }, millisecondsReference);
   }
 }
-// Events
+
+// EVENTS
 startTimeBtn.addEventListener('click', timeStart);
